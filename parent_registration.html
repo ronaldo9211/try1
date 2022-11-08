@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Parent registration</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <style>
+        body{
+            background-image: url("https://th.bing.com/th/id/R.30b61db0b33b875e741f31f971a3d901?rik=XR%2by5%2bM6hFIniw&riu=http%3a%2f%2fwww.eurthisnthat.com%2fwp-content%2fuploads%2f2017%2f08%2fschool-parent-sending-child.jpg&ehk=C2mHbrVDMIMvPmkWrlOmjWqJZVzwgxMGCEXw1OARzUw%3d&risl=&pid=ImgRaw&r=0");
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: blue; text-align: center;">PARENTS REGISTRATION FORM</h1> 
+    <form>
+            <table align="center">
+                <tr>
+                    <td colspan="2">
+                        <label for="name">Name</label><br>
+                        <input type="text" name="name" placeholder="Enter your full name here" id="name" style="width:360px">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <label id="mob" for="mobile">Mobile</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="email" style="width:  170px" name="email" placeholder="Enter your Email Id here" id="email">
+                    </td>
+                    <td>
+                        <input type="text"  style="width:  170px" name="mobile" placeholder="Enter Mobile No." id="mobile">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="occupation">Occupation</label><br>
+                    </td>
+                </tr> 
+                <tr>
+                    <td>
+                        <input type="text" style="width:  170px" name="occupation" placeholder="Enter your Occupation" id="occupation"> 
+                    </td>
+                </tr> 
+                <tr>
+                    <td><label for="childstd">Child STD</label></td>
+                    <td> <label for="div" id="divi">Division</label></td>
+                </tr>
+                <tr>
+                    <td> 
+                        <select style="width:177px; height:23px;">
+                            <option selected disabled>Please Select</option>
+                            <option>Play school</option>
+                            <option>Junior LKG</option>
+                            <option>Senior LKG</option>
+                        </select>
+                    </td>
+                
+                    <td>
+                        <select style="width:177px;height:23px;">
+                            <option selected disabled>Please Select</option>
+                            <option>Div A</option>
+                            <option>Div B</option>
+                            <option>Div C</option>
+                        </select>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td colspan="2">
+                        <label for="captcha">Captcha</label><br>
+                        <input type="text" style="width:  185px" name="captcha" id="capcheck" placeholder="Enter Captcha here">  
+                        <input type="text" id="capid" style="width:50px;background-color: red; color: white;text-align: center;" disabled>
+                        <span id="reer"></span>
+                    </td>
+                </tr>
+                
+                
+                <tr>
+                    <td>
+                        <button type="submit"  name="submit" id="sub" >SUBMIT</button>
+                    </td>
+                    <td>
+                        <button type="reset" name="reset" id="res">RESET</button>
+                    </td>
+                </tr>
+            </table>  
+    </form>
+    <script>
+        function captcha()
+        {
+            var captc=["1","2","3","4","5","6","7","8","9","0","a","b","c","d"]
+            var a=captc[Math.floor(Math.random()*captc.length)]
+            var b=captc[Math.floor(Math.random()*captc.length)]
+            var c=captc[Math.floor(Math.random()*captc.length)]
+            var d=captc[Math.floor(Math.random()*captc.length)]
+            document.getElementById("capid").value=(a+b+c+d)
+        }
+        window.onload=captcha
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!-- onloada works on window  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Product</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <style>
+        .col{
+            background-color: rgb(210, 227, 241);
+        }
+        #textb{
+            width: 400px;
+            height: 70px;
+        }
+        #country{
+            width: 210px;
+            height: 22px;
+        }
+        #para{
+            font-size: 22px;
+        }
+        .tr1{
+            background-color: grey;
+            color: white;
+            text-align: left;
+        }
+        h1{
+            color: orangered;
+            font-style: italic;
+            margin-bottom: 0%;
+        }
+        #outline{
+            border: 2px solid green;
+        }
+        .marg{
+            width:690px ;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Express Registration
+    </h1>
+    
+    <form>
+        <table>
+            <tr>
+                <td colspan="4"><p id="para">Please note that all fields that have an asterisk(*) are required to process your <br>registration</p></td>
+            </tr>
+            <tr class="tr1">
+                <th colspan="2">
+                    Personal Details
+                </th>
+                <th colspan="2">
+                    Address
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Title:
+                </td>
+                <td>
+                    <input class="col" type="text" name="title"><br>
+                    (Mr/Mrs/Miss)
+                </td>
+                <td>
+                    Address:
+                </td>
+                <td>
+                    <input class="col" type="text" name="adddres">*
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    First Name:
+                </td>
+                <td>
+                    <input class="col" type="text" name="Namefirst"><br>*
+                </td>
+                <td></td>
+                <td> <input class="col" type="text" name="address1">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Last Name :
+                </td>
+                <td>
+                    <input class="col" type="text" name="namelast"  ><br>*
+                </td>
+                <td>
+                    Town:
+                </td>
+                <td>
+                    <input class="col" type="text" name="town name">*
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Email Address:
+                </td>
+                <td>
+                    <input class="col" type="email" name="emailid"><br>*
+                </td>
+                <td>
+                    County/State:
+                </td>
+                <td>
+                    <input class="col" type="text" name="state">*
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Telephone:
+                </td>
+                <td>
+                    <input class="col" type="text" name="phone"><br>*
+                </td>
+                <td>
+                    Country:
+                </td>
+                <td>
+                    <select id="country" class="col">
+                        <option selected disabled>
+                            Select Your Country
+                        </option>
+                    </select>*
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cell Phone:
+                </td>
+                <td>
+                    <input class="col" type="text" name="cellp">
+                </td>
+                <td>
+                    Postcode:
+                </td>
+                <td>
+                    <input class="col" type="text" name="postc">*
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Comment:
+                </td>
+                <td colspan="3">
+                    <textarea name="textb" class="col" id="textb"></textarea>
+                </td>
+            </tr>
+        </table>
+        <table id="outline" class="marg">
+            <tr>
+                <td>
+                    Feedback
+                </td>
+
+                <td>
+                    <input class="col" type="text" name="feedb">
+                </td>
+                <td>
+                    Hear us From?
+                </td>
+                <td>
+                    <input class="col" type="checkbox" name="friend">Friend
+                    <input class="col" type="checkbox" name="site">Site Owner<br>
+                    <input class="col" type="checkbox" name="search">Search Engine
+                </td>
+            </tr>
+        </table>
+        <table class="marg">
+            <tr >
+                <th colspan="4" class="tr1">
+                    Security Details
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Choose<br>Password:
+                </td>
+                <td>
+                    <input class="col" type="text" name="choosep"><br>*
+                </td>
+                <td>
+                    Confirm<br>Password
+                </td>
+                <td>
+                    <input class="col" type="text" name="conp">*
+                </td>
+            </tr>
+                
+               
+            
+
+            
+        </table>
+    </form>
+    <script>
+        function opt(){
+            var arr=["United States of America","Canada","India","China","United Kingdom","France","Russia","Denmark"]
+            for(var a of arr){
+                document.getElementById("country").innerHTML+=`<option> ${a} </option>`
+            }
+        }
+        window.onload=opt
+    </script>
+</body>
+</html>

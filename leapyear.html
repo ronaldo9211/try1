@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Leap Year</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script> -->
+</head>
+<body>
+    <label for="leap">Enter Year</label>
+    <input type="text" name="leap" id="leapyear">
+    <button type="button" id="btn">Check</button>
+
+    <script>
+        document.getElementById("btn").onclick=(()=>{
+            let year= parseInt(document.getElementById("leapyear").value)
+            if((year%400)==0 || (year%4)==0 && (c%100)!=0){
+                window.alert(`${year} is Leap Year`)
+            }
+            else{
+                window.alert(`${year} is not Leap Year`)
+            }
+
+        })
+        
+    </script>
+</body>
+</html>
